@@ -35,48 +35,81 @@ import Yoshi_4 from '../../../public/notes/YOSHI/yoshi_4.mp3';
 import Messi from '../../../public/notes/MESSI/messi.mp3';
 
 function Atajos() {
-  const audioRef = useRef(new Audio());
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    audioRef.current = {
+      pianoDo: new Audio(pianoDo),
+      pianoRe: new Audio(pianoRe),
+      pianoMi: new Audio(pianoMi),
+      pianoFa: new Audio(pianoFa),
+      pianoSol: new Audio(pianoSol),
+      pianoLa: new Audio(pianoLa),
+      pianoSi: new Audio(pianoSi),
+      pianoC3: new Audio(pianoC3),
+      bellDo: new Audio(bellDo),
+      bellRe: new Audio(bellRe),
+      bellMi: new Audio(bellMi),
+      bellFa: new Audio(bellFa),
+      bellSol: new Audio(bellSol),
+      bellLa: new Audio(bellLa),
+      bellSi: new Audio(bellSi),
+      bellDoM: new Audio(bellDoM),
+      meow1: new Audio(meow1),
+      meow2: new Audio(meow2),
+      meow3: new Audio(meow3),
+      meow4: new Audio(meow4),
+      meow5: new Audio(meow5),
+      meow6: new Audio(meow6),
+      meow7: new Audio(meow7),
+      meow8: new Audio(meow8),
+      yoshi1: new Audio(Yoshi_1),
+      yoshi2: new Audio(Yoshi_2),
+      yoshi3: new Audio(Yoshi_3),
+      yoshi4: new Audio(Yoshi_4),
+      messi: new Audio(Messi),
+    };
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       const key = event.key.toLowerCase();
-      const notas = [
-        { key: 'q', label: 'Do', sound: pianoDo },
-        { key: 'w', label: 'Re', sound: pianoRe },
-        { key: 'e', label: 'Mi', sound: pianoMi },
-        { key: 'r', label: 'Fa', sound: pianoFa },
-        { key: 't', label: 'Sol', sound: pianoSol },
-        { key: 'y', label: 'La', sound: pianoLa },
-        { key: 'u', label: 'Si', sound: pianoSi },
-        { key: 'i', label: 'Do', sound: pianoC3 },
-        { key: 'a', label: 'Do', sound: bellDo },
-        { key: 's', label: 'Re', sound: bellRe },
-        { key: 'd', label: 'Mi', sound: bellMi },
-        { key: 'f', label: 'Fa', sound: bellFa },
-        { key: 'g', label: 'Sol', sound: bellSol },
-        { key: 'h', label: 'La', sound: bellLa },
-        { key: 'j', label: 'Si', sound: bellSi },
-        { key: 'k', label: 'Do', sound: bellDoM },
-        { key: '1', label: 'Do', sound: meow1 },
-        { key: '2', label: 'Re', sound: meow2 },
-        { key: '3', label: 'Mi', sound: meow3 },
-        { key: '4', label: 'Fa', sound: meow4 },
-        { key: '5', label: 'Sol', sound: meow5 },
-        { key: '6', label: 'La', sound: meow6 },
-        { key: '7', label: 'Si', sound: meow7 },
-        { key: '8', label: 'Do', sound: meow8 },
-        { key: 'z', label: '1', sound: Yoshi_1 },
-        { key: 'x', label: '2', sound: Yoshi_2 },
-        { key: 'c', label: '3', sound: Yoshi_3 },
-        { key: 'v', label: '4', sound: Yoshi_4 },
-        { key: 'm', label: '10', sound: Messi },
-      ];
-      const nota = notas.find((item) => item.key === key);
+      const notas = {
+        q: 'pianoDo',
+        w: 'pianoRe',
+        e: 'pianoMi',
+        r: 'pianoFa',
+        t: 'pianoSol',
+        y: 'pianoLa',
+        u: 'pianoSi',
+        i: 'pianoC3',
+        a: 'bellDo',
+        s: 'bellRe',
+        d: 'bellMi',
+        f: 'bellFa',
+        g: 'bellSol',
+        h: 'bellLa',
+        j: 'bellSi',
+        k: 'bellDoM',
+        1: 'meow1',
+        2: 'meow2',
+        3: 'meow3',
+        4: 'meow4',
+        5: 'meow5',
+        6: 'meow6',
+        7: 'meow7',
+        8: 'meow8',
+        z: 'yoshi1',
+        x: 'yoshi2',
+        c: 'yoshi3',
+        v: 'yoshi4',
+        m: 'messi',
+      };
+      const nota = notas[key];
       if (nota) {
-        audioRef.current.src = nota.sound;
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
+        const audio = audioRef.current[nota];
+        audio.currentTime = 0;
+        audio.play();
       }
     };
 
