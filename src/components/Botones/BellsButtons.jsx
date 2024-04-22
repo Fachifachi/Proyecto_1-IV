@@ -11,14 +11,14 @@ import bellDoM from '../../../public/notes/BELLS/bell_doM.mp3';
 
 function Bells() {
   const bellNotes = [
-    { key: 'a', label: 'Do', sound: bellDo },
-    { key: 's', label: 'Re', sound: bellRe },
-    { key: 'd', label: 'Mi', sound: bellMi },
-    { key: 'f', label: 'Fa', sound: bellFa },
-    { key: 'g', label: 'Sol', sound: bellSol },
-    { key: 'h', label: 'La', sound: bellLa },
-    { key: 'j', label: 'Si', sound: bellSi },
-    { key: 'k', label: 'Do', sound: bellDoM },
+    { key: 'a', label: 'A', sound: bellDo },
+    { key: 's', label: 'S', sound: bellRe },
+    { key: 'd', label: 'D', sound: bellMi },
+    { key: 'f', label: 'F', sound: bellFa },
+    { key: 'g', label: 'G', sound: bellSol },
+    { key: 'h', label: 'H', sound: bellLa },
+    { key: 'j', label: 'J', sound: bellSi },
+    { key: 'k', label: 'K', sound: bellDoM },
   ];
 
   

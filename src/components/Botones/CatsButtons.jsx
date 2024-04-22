@@ -11,14 +11,14 @@ import meow8 from '../../../public/notes/CATS/meow8.wav';
 
 function Cats() {
   const catsNotes = [
-    { key: '1', label: 'Do', sound: meow1 },
-    { key: '2', label: 'Re', sound: meow2 },
-    { key: '3', label: 'Mi', sound: meow3 },
-    { key: '4', label: 'Fa', sound: meow4 },
-    { key: '5', label: 'Sol', sound: meow5 },
-    { key: '6', label: 'La', sound: meow6 },
-    { key: '7', label: 'Si', sound: meow7 },
-    { key: '8', label: 'Do', sound: meow8 },
+    { key: '1', label: '1', sound: meow1 },
+    { key: '2', label: '2', sound: meow2 },
+    { key: '3', label: '3', sound: meow3 },
+    { key: '4', label: '4', sound: meow4 },
+    { key: '5', label: '5', sound: meow5 },
+    { key: '6', label: '6', sound: meow6 },
+    { key: '7', label: '7', sound: meow7 },
+    { key: '8', label: '8', sound: meow8 },
   ];
 
   const isLessThan1400px = window.innerWidth < 1100;

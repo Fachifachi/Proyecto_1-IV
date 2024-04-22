@@ -28,7 +28,7 @@ function Messi({ isMenuVisible }) {
             className='bg-blue-500 hover:bg-blue-300 text-white font-bold rounded-full shadow-md transition duration-300 ease-in-out'
             style={{ width: '50px', height: '50px', margin: '5px' }}
           >
-            10
+            M
           </button>
         }
       </div>

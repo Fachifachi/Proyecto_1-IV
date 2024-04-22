@@ -11,14 +11,14 @@ import pianoC3 from '../../../public/notes/PIANO/Piano_c3.wav';
 
 function Piano() {
   const pianoNotes = [
-    { key: 'q', label: 'Do', sound: pianoDo },
-    { key: 'w', label: 'Re', sound: pianoRe },
-    { key: 'e', label: 'Mi', sound: pianoMi },
-    { key: 'r', label: 'Fa', sound: pianoFa },
-    { key: 't', label: 'Sol', sound: pianoSol },
-    { key: 'y', label: 'La', sound: pianoLa },
-    { key: 'u', label: 'Si', sound: pianoSi },
-    { key: 'i', label: 'Do', sound: pianoC3 },
+    { key: 'q', label: 'Q', sound: pianoDo },
+    { key: 'w', label: 'W', sound: pianoRe },
+    { key: 'e', label: 'E', sound: pianoMi },
+    { key: 'r', label: 'R', sound: pianoFa },
+    { key: 't', label: 'T', sound: pianoSol },
+    { key: 'y', label: 'Y', sound: pianoLa },
+    { key: 'u', label: 'U', sound: pianoSi },
+    { key: 'i', label: 'I', sound: pianoC3 },
   ];
 
  

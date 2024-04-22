@@ -10,10 +10,10 @@ function Yoshi() {
     const [currentSound, setCurrentSound] = useState(null);
   
     const yoshiNotes = [
-      { key: 'z', label: '1', sound: Yoshi_1 },
-      { key: 'x', label: '2', sound: Yoshi_2 },
-      { key: 'c', label: '3', sound: Yoshi_3 },
-      { key: 'v', label: '4', sound: Yoshi_4 },
+      { key: 'z', label: 'Z', sound: Yoshi_1 },
+      { key: 'x', label: 'X', sound: Yoshi_2 },
+      { key: 'c', label: 'C', sound: Yoshi_3 },
+      { key: 'v', label: 'V', sound: Yoshi_4 },
     ];
   
     
